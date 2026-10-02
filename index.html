@@ -15,7 +15,7 @@
       padding: 32px 16px;
       display: grid;
       place-items: center;
-      background: #fff8d9;
+      background-color: #fff8d9;
       color: #3d3522;
       font-family: sans-serif;
       line-height: 1.8;
@@ -29,6 +29,8 @@
       background: #fff;
       box-shadow: 0 8px 0 #ead58b;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     .animals {
@@ -84,9 +86,38 @@
       color: #756b55;
       font-size: 0.78rem;
     }
+
+    .decorations {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .decorations img {
+      position: absolute;
+      width: 300px;
+    }
+
+    .decorations img:nth-child(1) { top: 5%; left: 5%; }
+    .decorations img:nth-child(2) { top: 12%; right: 5%; }
+    .decorations img:nth-child(3) { top: 45%; left: 2%; }
+    .decorations img:nth-child(4) { top: 50%; right: 3%; }
+    .decorations img:nth-child(5) { bottom: 5%; left: 8%; }
+    .decorations img:nth-child(6) { bottom: 4%; right: 8%; }
   </style>
 </head>
 <body>
+  <div class="decorations" aria-hidden="true">
+    <img src="images/topbg-decoration.png" alt="">
+    <img src="images/topbg-decoration.png" alt="">
+    <img src="images/topbg-decoration.png" alt="">
+    <img src="images/topbg-decoration.png" alt="">
+    <img src="images/topbg-decoration.png" alt="">
+    <img src="images/topbg-decoration.png" alt="">
+  </div>
+
   <main class="card">
     <p class="animals" aria-label="ハムスターとくま">🐹 🐻</p>
     <h1>はじめてのWebサイト 🎉</h1>
