@@ -106,6 +106,55 @@
     .decorations img:nth-child(4) { top: 50%; right: 3%; }
     .decorations img:nth-child(5) { bottom: 5%; left: 8%; }
     .decorations img:nth-child(6) { bottom: 4%; right: 8%; }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 12px;
+      }
+
+      .card {
+        padding: 24px 16px;
+      }
+
+      .decorations img {
+        width: 90px;
+      }
+
+      /* スマホでは飾りを四隅の4つにして、重なりを防ぎます */
+      .decorations img:nth-child(1) {
+        top: 2%;
+        left: 2%;
+      }
+
+      .decorations img:nth-child(2) {
+        top: 2%;
+        right: 2%;
+      }
+
+      .decorations img:nth-child(3) {
+        top: auto;
+        bottom: 2%;
+        left: 2%;
+      }
+
+      .decorations img:nth-child(4) {
+        top: auto;
+        bottom: 2%;
+        right: 2%;
+      }
+
+      .decorations img:nth-child(5),
+      .decorations img:nth-child(6) {
+        display: none;
+      }
+
+      .link-button {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: 14px auto 0;
+      }
+    }
   </style>
 </head>
 <body>
