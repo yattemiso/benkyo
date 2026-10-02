@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHubを使ったWebサイトのつくりかた</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      background: #eef6ff;
+      color: #26384a;
+      font-family: sans-serif;
+      line-height: 1.8;
+    }
+
+    .card {
+      width: min(100%, 720px);
+      margin: 0 auto;
+      padding: 28px;
+      border: 2px solid #b8d9f5;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 7px 0 #d5e8f8;
+    }
+
+    .back-link {
+      color: #285f91;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus-visible {
+      text-decoration: underline;
+    }
+
+    .eyebrow {
+      margin: 24px 0 0;
+      color: #527fa7;
+      font-size: 0.85rem;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 6px 0 12px;
+      color: #285f91;
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      text-align: center;
+    }
+
+    .intro {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    .step {
+      margin: 16px 0;
+      padding: 18px;
+      border: 1px solid #d8e9f7;
+      border-radius: 16px;
+      background: #f7fbff;
+    }
+
+    .step h2 {
+      margin: 0 0 8px;
+      color: #285f91;
+      font-size: 1.15rem;
+    }
+
+    .step p {
+      margin: 8px 0 0;
+    }
+
+    a {
+      color: #175f9b;
+    }
+
+    code {
+      padding: 2px 6px;
+      border-radius: 5px;
+      background: #e8f2fb;
+      font-size: 0.95em;
+    }
+
+    .note {
+      margin-top: 24px;
+      color: #536577;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 22px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <a class="back-link" href="../index.html">← はじめてのWebサイトへ戻る</a>
+
+    <p class="eyebrow">A LITTLE WEB GUIDE 🐻</p>
+    <h1>GitHubを使った<br>Webサイトのつくりかた</h1>
+    <p class="intro">PCで作業するときの、基本的な流れをまとめました。</p>
+
+    <section class="step">
+      <h2>1. GitHubでリポジトリ（箱）を作る 📦</h2>
+      <p>
+        ブラウザでGitHubを開き、「New」から新しいリポジトリを作ります。
+      </p>
+      <p>
+        <a href="https://github.com/">GitHubを開く ↗</a>
+      </p>
+      <p>
+        ※「GitHub Pages」はWebサイトを公開する機能の名前です。
+        リポジトリを作る場所はGitHubです。
+      </p>
+    </section>
+
+    <section class="step">
+      <h2>2. GitHub Desktopでパソコンに持ってくる 💻</h2>
+      <p>
+        初回のみ行います。GitHub Desktopを使って、GitHubで作った
+        リポジトリをパソコンにダウンロード（Clone）します。
+      </p>
+    </section>
+
+    <section class="step">
+      <h2>3. VS CodeとCopilotでページを作る ✏️</h2>
+      <p>
+        VS Codeでリポジトリのフォルダーを開き、Copilotに
+        「〇〇なサイトを作って」とお願いしながらコードを作成・編集します。
+      </p>
+      <p>
+        完成した <code>index.html</code> をブラウザにドラッグ＆ドロップして、
+        見た目や動きを確認します。手元のPC内での確認なので、何度でもやり直せます。
+      </p>
+    </section>
+
+    <section class="step">
+      <h2>4. GitHub Desktopでネットに送る 🚀</h2>
+      <p>
+        思い通りのサイトができたら、GitHub Desktopで変更内容のメモを書いて
+        <strong>Commit</strong>し、<strong>Push</strong>してGitHubへ送ります。
+      </p>
+    </section>
+
+    <section class="step">
+      <h2>5. GitHub Pagesで公開する 🌐</h2>
+      <p>
+        初回のみ、GitHubのリポジトリで
+        <code>Settings &gt; Pages</code> を開き、公開設定を行います。
+      </p>
+      <p>
+        2回目以降は、Step 4のPush後に数分待ってから公開URLを再読み込みすると、
+        更新が反映されます。
+      </p>
+    </section>
+
+    <p class="note">少しずつ試しながら、自分のペースで作ってみましょう 🐹</p>
+  </main>
+</body>
+</html>
