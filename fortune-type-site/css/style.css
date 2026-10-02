@@ -185,6 +185,12 @@ form > .button {
   font-size: 1.1rem;
 }
 
+.result #fortune-link {
+  display: block;
+  width: fit-content;
+  margin: 24px auto 0;
+}
+
 @media (max-width: 480px) {
   .card {
     padding: 22px 18px;
