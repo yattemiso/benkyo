@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>キャンディキャッチ・ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-area" data-screen="start">
+    <img class="stage-art" src="images/play.jpg" alt="" aria-hidden="true">
+    <a class="back-link" href="../index.html">🐹 トップページへ戻る</a>
+    <h1>キャンディキャッチ 🍬</h1>
+
+    <div class="status">
+      <p class="score" aria-live="polite">スコア：<span>0</span></p>
+      <p class="timer" aria-live="polite">のこり：<span>45</span>秒</p>
+    </div>
+
+    <div class="message-area">
+      <p class="instructions">
+        <span>45秒以内にお菓子をたくさん集めて高得点をめざそう！</span>
+        <span class="point-guide">🍬 1点　🍪 3点　🍰 5点</span>
+        <span class="bear-guide">🐻さんに当たるとお菓子を全部取られて、スコアが0に😢</span>
+        <span class="movement-guide">マウス・スワイプで🐹を動かしてみよう！</span>
+        <span>タイマーは「スタート」で動き出すよ</span>
+      </p>
+      <p class="game-message" role="status" aria-live="polite" hidden></p>
+    </div>
+
+    <section class="results" aria-labelledby="results-heading" hidden>
+      <h2 id="results-heading">今回のランク</h2>
+      <p class="final-rank"></p>
+      <p class="rank-comment"></p>
+      <ol class="rank-list"></ol>
+    </section>
+
+    <div class="playfield">
+      <div class="player" role="img" aria-label="プレイヤーのハムスター">🐹</div>
+      <p class="reaction" aria-hidden="true"></p>
+      <p class="pause-message" aria-hidden="true" hidden>一時停止中 ⏸</p>
+    </div>
+
+    <div class="controls">
+      <button class="start-button" type="button">
+        <span class="button-icon" aria-hidden="true">▶️</span>
+        <span class="button-label">スタート</span>
+      </button>
+      <button class="pause-button" type="button" hidden>
+        <span class="button-icon" aria-hidden="true">⏸️</span>
+        <span class="button-label">一時停止</span>
+      </button>
+      <button class="give-up-button" type="button" hidden>
+        <span class="button-icon" aria-hidden="true">🏳️</span>
+        <span class="button-label">ギブアップ</span>
+      </button>
+      <button class="return-start-button" type="button" hidden>
+        ↩️ スタート画面にもどる
+      </button>
+    </div>
+  </main>
+  <img
+    class="bottom-decoration"
+    src="images/start.jpg"
+    alt=""
+    aria-hidden="true"
+  >
+  <script src="game.js"></script>
+</body>
+</html>
