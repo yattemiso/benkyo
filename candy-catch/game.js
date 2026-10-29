@@ -134,7 +134,7 @@ function showBearReaction() {
   reactionTimer = setTimeout(() => {
     player.classList.remove("is-eating");
     reaction.textContent = "";
-    gameMessage.textContent = "がんばってお菓子を集めよう！";
+    gameMessage.textContent = "くまさんに気をつけてお菓子を集めよう！";
   }, 1500);
 }
 
@@ -162,7 +162,7 @@ function showResults() {
     if (rank === currentRank) {
       item.classList.add("is-current");
       item.setAttribute("aria-current", "true");
-      name.textContent = `★ ${rank.name}（今回）`;
+      name.textContent = `🌟 ${rank.name}（今回）`;
     } else {
       item.classList.add("is-other");
     }
@@ -327,7 +327,7 @@ startButton.addEventListener("click", () => {
   giveUpButton.hidden = false;
   pauseButtonIcon.textContent = "⏸️";
   pauseButtonLabel.textContent = "一時停止";
-  gameMessage.textContent = "がんばってお菓子を集めよう！";
+  gameMessage.textContent = "くまさんに気をつけてお菓子を集めよう！";
   positionPlayfield();
 
   requestAnimationFrame(updateGame);
